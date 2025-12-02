@@ -110,7 +110,7 @@ for i, municipio in enumerate(municipios_unicos):
         lat=df_temp['LATITUD'],
         mode='text',
         text='🏥',
-        textfont=dict(size=14, color='white'),
+        textfont=dict(size=16),
         hoverinfo='skip',
         showlegend=False
     ))
@@ -122,8 +122,19 @@ fig_mapa.update_layout(
         zoom=8
     ),
     height=700,
-    margin={"r":0,"t":50,"l":0,"b":0},
+    margin={"r":0,"t":50,"l":0,"b":80},
     showlegend=True,
+    legend=dict(
+        orientation="h",  # Horizontal
+        yanchor="bottom",
+        y=-0.2,
+        xanchor="center",
+        x=0.5,
+        bgcolor="rgba(255, 255, 255, 0.9)",
+        bordercolor="gray",
+        borderwidth=1,
+        font=dict(size=9, color='black')
+    ),
     title='Ubicación de las Unidades en el Estado de Hidalgo'
 )
 
